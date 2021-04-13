@@ -7,7 +7,7 @@ description: Unofficial Amazon Cognito Identity Provider Dart SDK, to add user
 
 dependencies:
   convert: ^3.0.0
-  crypto: ^2.0.2+1
+  crypto: ^3.0.1
   http: ^0.13.0
 
 dev_dependencies:

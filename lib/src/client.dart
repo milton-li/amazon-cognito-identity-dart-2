@@ -21,7 +21,7 @@ class Client {
     _region = region;
     _service = service;
     _userAgent = userAgent;
-    this.endpoint = endpoint ?? 'https://cognito-idp.$_region.amazonaws.com/';
+    this.endpoint = endpoint ?? 'cognito-idp.$_region.amazonaws.com';
     _client = client ?? http.Client();
   }
 
@@ -41,7 +41,7 @@ class Client {
     http.Response response;
     try {
       response = await _client.post(
-        endpointReq,
+        Uri.https(endpointReq, ''),
         headers: headersReq,
         body: body,
       );
